@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="fundo">
+    <div>
+        <h1 id="title">Cadastro de devs</h1>
+        <p id="subtitulo">Complete suas informações.</p>
+        <br>
+    </div>
+    <forms>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" class="nome" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" class="nome sobrenome" required> <!-- Adicionei 2 classes. A classe nome é a GENERALIZADORA, enquanto que, a classe sobrenome é a classe modificadora. Só fiz isso para poder remover o outline sem precisar escrever muito no CSS. -->
+        </fieldset> 
+            <div class="campo">
+                <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
+                <label>
+                    <input type="radio" nome="devweb" value="frontend">FRONT-END
+                </label>    
+                <label>
+                    <input type="radio" nome="devweb" value="backend">BACK-END
+                </label>
+                <label>
+                    <input type="radio" nome="devweb" value="fullstack">FULLSTACK
+                </label>
+            </div>
+            <div class="campo">
+                <label for="senioridade"><strong>Senioridade</strong></label>
+                <select id="senioridade">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Junior</option>
+                    <option>Pleno</option>
+                    <option>Sênior</option>
+                </select>
+            </div>
+            <fieldset class="grupo">
+                <div id="check">
+                    <label><strong>Selecione as tecnologias que você trabalha:</strong></label><br><br>
+                    <input type="checkbox" id="tecnologia1" nome="tecnologia1" value="HTML"> HTML
+                    <input type="checkbox" id="tecnologia2" nome="tecnologia2" value="CSS"> CSS
+                    <input type="checkbox" id="tecnologia3" nome="tecnologia3" value="PYTHON"> PYTHON
+                    <input type="checkbox" id="tecnologia4" nome="tecnologia4" value="RUBY"> RUBY
+                    <input type="checkbox" id="tecnologia5" nome="tecnologia5" value="JAVA"> JAVA
+                    <input type="checkbox" id="tecnologia6" nome="tecnologia6" value="PHP"> PHP<br>
+                    <input type="checkbox" id="tecnologia7" nome="tecnologia7" value="JAVASCRIPT"> JAVASCRIPT
+                </div>
+            </fieldset>
+            <div class="campo">
+                <br>
+                <label></label><strong>Conte um pouco da sua experiência:</strong></label>
+                <textarea id="experiencia"></textarea>
+            </div>
+            <button type="submit" class="botao">Concluído</button>
+        </fieldset>
+    </forms>
+    </div>
+</body>
+</html>
